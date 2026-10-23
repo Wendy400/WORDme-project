@@ -137,8 +137,8 @@ searchForm.addEventListener("submit", async event => {
     const pronunPar = document.createElement("p");
     //pronunPar.textContent = firstEntry.pronunciations?.[0]?.text || "";
     pronunPar.classList.add("pronunciation");
-//...........................................................
-//SPEAKER , voice output feature
+    //...........................................................
+    //SPEAKER , voice output feature
     const pronText = firstEntry.pronunciations?.[0]?.text || "";
 
     // Create a container span for the pronunciation text
@@ -151,7 +151,7 @@ searchForm.addEventListener("submit", async event => {
         speakButton.type = "button";
         speakButton.innerHTML = "🔊 Listen";
         speakButton.classList.add("speak-button");
-        
+
         // Add event listener to trigger speech synthesis
         speakButton.addEventListener("click", () => {
             playPronunciation(data.word);
@@ -163,23 +163,23 @@ searchForm.addEventListener("submit", async event => {
     }
 
     function playPronunciation(word) {
-    // Check if browser supports speech synthesis
-    if (!('speechSynthesis' in window)) {
-        alert("Text-to-speech is not supported in this browser.");
-        return;
+        // Check if browser supports speech synthesis
+        if (!('speechSynthesis' in window)) {
+            alert("Text-to-speech is not supported in this browser.");
+            return;
+        }
+
+        // Cancel any ongoing speech so they don't overlap if clicked rapidly
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = "en-US"; // Set language to English
+        utterance.rate = 0.9;   // Slightly slower rate for clearer pronunciation learning
+
+        window.speechSynthesis.speak(utterance);
     }
 
-    // Cancel any ongoing speech so they don't overlap if clicked rapidly
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = "en-US"; // Set language to English
-    utterance.rate = 0.9;   // Slightly slower rate for clearer pronunciation learning
-
-    window.speechSynthesis.speak(utterance);
-}
-
-//.............................................
+    //.............................................
 
     const defHeading = document.createElement("h4");
     defHeading.textContent = "Definition";
