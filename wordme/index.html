@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORDMe</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <!--<script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>-->
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>📚WORD<span>Me</span></h1>
+        <button id="themeBtn" type="button">🌙 Dark mode</button>
+    </header>
+    <main>
+        <div>
+            <div class="search-intro">
+                <h2>Your world of new discoveries</h2>
+                <p>Search for a word to explore its meaning, pronunciation, and more.</p>
+            </div>
+
+            <form id="searchForm">
+                <div class="search-group">
+                    <label for="words"></label>
+                    <input type="text" id="words" placeholder="Enter word here">
+                    <button id="searchBtn" type="submit" class="search-button">Search</button>
+                    <button id="clearBtn" type="reset" class="clear-button">Clear</button>
+
+                </div>
+
+            </form>
+            <p id="errorMsg"></p>
+
+        </div>
+        
+
+        <div class="workspace-grid">
+            <section id="searchResults">
+                <p class="list-empty">Enter a word above to explore its definition, pronunciation, and examples.</p>
+            </section>
+
+            <aside class="sidebar-container">
+                <div class="side-card">
+                    <h3 class="section-title">Recent searches &#128269:</h3>
+                    <p class="list-empty">Your search history will appear here.</p>
+                    <div id="searchHistory" class="word-list"></div>
+
+                </div>
+
+
+                <div class="side-card">
+                    <h3 class="section-title">Favourites &#10084;&#65039: </h3>
+                    <div id="favorites" class="word-list"></div>
+                    <p class="list-empty">Save a word to start your collection.</p>
+                </div>
+            </aside>
+        </div>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
