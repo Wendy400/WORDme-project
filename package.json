@@ -1,0 +1,24 @@
+{
+  "name": "wordme-project",
+  "version": "1.0.0",
+  "description": "**WORDMe** is a sleek, responsive Single Page Application (SPA) dictionary web app built with JavaScript. It allows users to search for word definitions, explore phonetic pronunciations, listen to audio output, track recent search history, and maintain a personal collection of favorite words.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendy400/WORDme-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendy400/WORDme-project/issues"
+  },
+  "homepage": "https://github.com/Wendy400/WORDme-project#readme",
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
+  }
+}

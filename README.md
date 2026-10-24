@@ -91,6 +91,10 @@ WORDMe was built as a Single Page Application to practice:
 - Implementing light and dark themes
 - Working with browser Web APIs
 
+## 👩‍💻 Developer
+
+Wendy Wahome
+
 ---
 
 **Built with HTML, CSS, and Vanilla JavaScript.** 💚
